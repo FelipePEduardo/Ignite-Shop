@@ -13,7 +13,6 @@ import 'keen-slider/keen-slider.min.css'
 import Stripe from "stripe"
 import React, { useContext } from "react"
 import { ProductsListContext } from "../contexts/ProductsListContext"
-import { stringify } from "querystring"
 
 interface ProductProps {
   id: string
@@ -22,6 +21,7 @@ interface ProductProps {
   price: string
   description: string
   priceNumber: number 
+  defaultPriceId: string
 }
 
 interface HomeProps {
@@ -100,7 +100,8 @@ export const getStaticProps: GetStaticProps = async () => {
         style: 'currency',
         currency: 'BRL',
       }).format(price.unit_amount / 100),
-      priceNumber: price.unit_amount / 100
+      priceNumber: price.unit_amount / 100,
+      defaultPriceId: price.id,
     }
   })
 

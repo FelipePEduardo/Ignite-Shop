@@ -7,6 +7,7 @@ export interface ProductProps {
   price: string
   description: string
   priceNumber: number
+  defaultPriceId: string
 }
 
 interface ProductsListContextType {

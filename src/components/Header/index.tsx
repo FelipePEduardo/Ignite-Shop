@@ -22,8 +22,6 @@ export function Header() {
   }).format(cartTotal)
 
   const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] = useState(false)
-
-  console.log(productsList) /* TIRAR DEPOIS */
   
   async function handleBuyProduct() {
     
