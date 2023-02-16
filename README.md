@@ -7,6 +7,10 @@ Este é o Ignite Shop, projeto desenvolvido em aula com a função de uma loja d
 - Ver produto selecionado
 - Tela de sucesso da compra com informações do usuário
 
+*Alterações*
+
+- Adicionado carrinho de comprar, podendo efetuar mais de uma compra
+
 ## Demonstração
 
 https://user-images.githubusercontent.com/103855358/217340990-0a9cac33-7ffa-4387-bc18-e09654d434f7.mp4
