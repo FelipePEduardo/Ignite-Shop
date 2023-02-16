@@ -7,27 +7,41 @@ import { useKeenSlider } from 'keen-slider/react'
 
 import { stripe } from "../lib/stripe"
 import { HomeContainer, Product } from "../styles/pages/home"
+import { Handbag } from 'phosphor-react'
 
 import 'keen-slider/keen-slider.min.css'
 import Stripe from "stripe"
+import React, { useContext } from "react"
+import { ProductsListContext } from "../contexts/ProductsListContext"
+import { stringify } from "querystring"
 
-interface HomeProps {
-  products: {
-    id: string
-    name: string
-    imageUrl: string
-    price: string
-  }[]
+interface ProductProps {
+  id: string
+  name: string
+  imageUrl: string
+  price: string
+  description: string
+  priceNumber: number 
 }
 
+interface HomeProps {
+  products: ProductProps[]
+}
 
 export default function Home({ products }: HomeProps) {
+  const { handleAddProductToCart , checkIfProductAlreadyExistsInProductsList } = useContext(ProductsListContext)
+
   const [ sliderRef ] = useKeenSlider({
     slides: {
       perView: 3,
       spacing: 48
     }
   })
+
+  function addProduct (e:React.SyntheticEvent<EventTarget>, product: ProductProps) {
+    e.preventDefault()
+    handleAddProductToCart(product)
+  }
 
   return (
     <>
@@ -48,8 +62,17 @@ export default function Home({ products }: HomeProps) {
                   <Image src={product.imageUrl} alt="" width={520} height={480} />
 
                   <footer>
-                    <strong>{product.name}</strong>
-                    <span>{product.price}</span>
+                    <div>
+                      <strong>{product.name}</strong>
+                      <span>{product.price}</span>
+                    </div>
+                    <button
+                      disabled={checkIfProductAlreadyExistsInProductsList(product.id)}
+                      onClick={(e) => {
+                      addProduct(e, product)
+                    }}>
+                      <Handbag size={32} weight="bold"/>
+                    </button>
                   </footer>
                 </Product>
               </Link>
@@ -77,6 +100,7 @@ export const getStaticProps: GetStaticProps = async () => {
         style: 'currency',
         currency: 'BRL',
       }).format(price.unit_amount / 100),
+      priceNumber: price.unit_amount / 100
     }
   })
 

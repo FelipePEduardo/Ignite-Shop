@@ -44,6 +44,30 @@ export const Product = styled('div', {
     opacity: 0,
     transition: 'all 0.2s ease-in-out',
 
+    'div:first-child' :{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 4,
+    },
+
+    button :{
+      border: 0,
+      background: '$green500',
+      padding: '0.75rem',
+      borderRadius: 6,
+
+      cursor: 'pointer',
+
+      '&:disabled': {
+        opacity: '0.7',
+        cursor: 'not-allowed',
+      },
+
+      svg:{
+        color: '$white'
+      },
+    },
+
     strong: {
       fontSize: '$lg',
       color: '$gray100'
