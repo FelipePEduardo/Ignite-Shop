@@ -9,7 +9,7 @@ Este é o Ignite Shop, projeto desenvolvido em aula com a função de uma loja d
 
 ## Demonstração
 
-Imagem
+https://user-images.githubusercontent.com/103855358/217340990-0a9cac33-7ffa-4387-bc18-e09654d434f7.mp4
 
 ## Stack utilizada
 
@@ -21,5 +21,5 @@ Criamos um projeto com o framework Next.js e StitchesJs para a estilização, pa
 
 ## 🔗 Links
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://felipepeduardo.github.io/Portfolio/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://felipepeduardodev.netlify.app)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/felipepereiraeduardo/)
