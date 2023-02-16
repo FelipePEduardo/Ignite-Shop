@@ -1,4 +1,4 @@
-# Ignite Shop
+# Ignite Shop 2.0!
 
 Este é o Ignite Shop, projeto desenvolvido em aula com a função de uma loja de roupas fictícias
 
@@ -7,9 +7,9 @@ Este é o Ignite Shop, projeto desenvolvido em aula com a função de uma loja d
 - Ver produto selecionado
 - Tela de sucesso da compra com informações do usuário
 
-*Alterações*
+*Alterações para o 2.0*
 
-- Adicionado carrinho de comprar, podendo efetuar mais de uma compra
+- Adicionado carrinho de compras, podendo efetuar mais de uma compra
 
 ## Demonstração
 
